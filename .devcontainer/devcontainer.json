@@ -1,0 +1,12 @@
+{
+  "name": "SlackONOS-Py (Dev)",
+  "dockerComposeFile": [
+    "docker-compose.yml" // behåll bara override-filen här för att slippa skumma sökvägar
+  ],
+  "service": "slackonos-py",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+  "overrideCommand": false
+}

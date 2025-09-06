@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  slackonos:
+    image: slackonos-py:local
+    container_name: slackonos-py
+    cap_add:
+      - NET_ADMIN
+    environment:
+      CONFIG_FILE: /app/config/config.json
+    volumes:
+      # Workspace-mount från repo-roten (mappen ovanför .devcontainer):
+      - ..:/workspaces/SlackONOS-Py
+      # Config (read-only):
+      - /Users/Henrik.Tilly/Documents/dev/private/SlackONOS-Py/config:/app/config:ro
+    ports:
+      - "8080:8080"
